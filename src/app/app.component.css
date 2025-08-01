@@ -1,0 +1,89 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header Styling */
+  .header {
+    background-color: rgb(6, 16, 27);
+    padding: 20px;
+    color: white;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .app-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 15px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 10px; /* Adjust padding to align with the button */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button Styling */
+  .btn {
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle; 
+    border-radius: 30px;
+  }
+  
+  .btn-logout {
+    background-color: #FF4D4D;
+    color: white;
+  }
+  
+  .btn-logout:hover {
+    background-color: #FF3333;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 8px;
+  }

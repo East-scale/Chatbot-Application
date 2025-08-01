@@ -1,0 +1,11 @@
+.chat-container {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.chat-message {
+  margin: 8px 0;
+}

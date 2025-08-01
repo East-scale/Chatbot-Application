@@ -1,0 +1,29 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="app-container">
+  <header class="header">
+    <div class="header-content">
+      <h1 class="app-title">Admin Dashboard</h1>
+      <nav class="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
+        
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item"><button class="btn btn-logout" (click)="logout()">Logout</button></li>
+        </ul>
+        
+      </nav>
+    </div>
+  </header>
+    <main class="main-content">
+    <!-- Router outlet where Angular will load the routed components -->
+    <router-outlet></router-outlet>
+  </main>
+</div>
