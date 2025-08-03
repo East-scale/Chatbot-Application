@@ -1,5 +1,50 @@
-<div class="chat-container">
-  <div *ngFor="let chat of chatbotMessages" class="chat-message">
-    <strong>{{ chat.user }}:</strong> {{ chat.message }}
+<div class="consultation-container">
+  <div class="header">
+    <h2>Consultation Responses</h2>
+    <button class="refresh-btn" (click)="refreshData()">Refresh Data</button>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading">
+    Loading consultation data...
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <!-- Data Table -->
+  <div *ngIf="!loading && !error" class="data-table">
+    <div *ngIf="consultationData.length === 0" class="no-data">
+      No consultation responses found.
+    </div>
+
+    <table *ngIf="consultationData.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let consultation of consultationData">
+          <td>{{ consultation.firstName }} {{ consultation.lastName }}</td>
+          <td>{{ consultation.companyName }}</td>
+          <td>{{ consultation.Role }}</td>
+          <td>{{ consultation.Email }}</td>
+          <td>{{ consultation.PhoneNumber }}</td>
+          <td>
+            <button class="delete-btn" (click)="deleteConsultation(consultation.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
